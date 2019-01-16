@@ -13,6 +13,8 @@ y = tf.matmul(a, w2)
 with tf.Session() as sess:
     init_op = tf.global_variables_initializer()
     sess.run(init_op)
+
+    # feed dict to x and get y, x shape is 4 x 2, y shape is 4 x 1
     print("y in tf3_5.py is:\n", sess.run(y, feed_dict={x: [[0.7, 0.5], [0.2, 0.3],
                                                             [0.3, 0.4], [0.4, 0.5]]}))
     print("w1:\n", sess.run(w1))

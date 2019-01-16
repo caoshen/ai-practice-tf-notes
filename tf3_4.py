@@ -13,4 +13,5 @@ y = tf.matmul(a, w2)
 with tf.Session() as sess:
     init_op = tf.global_variables_initializer()
     sess.run(init_op)
+    # feed dict to x and get y
     print("y in tf3_4.py is:\n", sess.run(y, feed_dict={x: [[0.7, 0.5]]}))
